@@ -1,11 +1,20 @@
 let data = [],
     feedbackdata = [],
     test = [],
+    time =  0,
+    counter = 20,
     index = 0;
 
 window.onload = function () {
     feedbackData();
     mainData();
+    setTimeout(function(){
+        document.querySelector('.question__welcome').classList += ' js-fadeout';
+    }, 2000);
+    setTimeout(function(){
+    document.querySelector('.question__items').classList += ' js-fadein';
+    }, 4000);  
+    
 }
 
 function mainData() {
@@ -78,6 +87,7 @@ function createQuestionTags(el) {
 
     //last tab position
     document.querySelector('.question__item--last').style.left = `${100 * (index + 2)}%`;
+    
     //buttons scripts
     el[0].answers.forEach(function (key) {
         let button = document.createElement('button'),
@@ -105,7 +115,7 @@ function createQuestionTags(el) {
             el.splice(0, 1);
             index++;
             if (el.length === 0) {
-                document.querySelector('question__result').textContent = `${time/60}m ${time % 60}s`
+                document.querySelector('.question__result').textContent = `${time} s`
                 return 0
             } else {
                 createQuestionTags(el)
@@ -124,6 +134,8 @@ function newQuestion() {
     first.addEventListener('click', function (e) {
         e.preventDefault();
         slider();
+        document.querySelector('.question__timer').style.visibility = 'visible';
+        setTimeout(timer(),500);
     });
 
 
@@ -133,6 +145,7 @@ function newQuestion() {
         document.querySelector('.message').classList.remove('js-fadein');
         document.querySelector('.message').classList.add('js-fadeout');
         slider();
+        setTimeout(timer(),2500);
     });
 
     function slider() {
@@ -165,6 +178,48 @@ function randomNumber() {
     return random;
 }
 
-if (screen.width <= 700) {
-    document.querySelector('.message__text').className = 'message__text sg-bubble sg-bubble--top';
+function timer(){
+    let stoper = document.querySelector('.question__timer'),
+        feedbacker = document.querySelector('.message__feedback'),
+        result = document.querySelector('.question__result').textContent,
+        feedback = document.querySelector('.message__feedback'),
+        counting = setInterval(function(){
+        counter--
+        stoper.innerHTML = `${counter}s`;
+    
+        if (data.length === 0) {
+                result.textContent = `${time} s`
+                clearInterval(counting);
+                stoper.style.visibility = 'hidden';
+        }    
+            
+        if(counter === 0){
+        feedbacker.textContent = 'Sorry, but you run out of time.';
+        feedbacker.style.color = '#ff796b';
+        document.querySelector('.message').classList.remove('js-fadeout');
+        document.querySelector('.message').classList.add('js-fadein');
+        addFeedbackDataBad(randomNumber());
+        time += 20 - counter;
+        counter = 20;
+        index++;
+        clearInterval(counting);
+        if (data.length === 0) {
+                result.textContent = `${time} s`
+                clearInterval(counting);
+                stoper.style.visibility = 'hidden';
+                return 0
+            } else {
+            createQuestionTags(data)
+            };
+       }
+    }, 1000);
+        
+    
+    document.querySelectorAll('.question__btn').forEach(function(btn){
+        btn.addEventListener('click', function(){
+            clearInterval(counting);
+            time += 20 - counter;
+            counter = 20;
+        })
+    })    
 }
