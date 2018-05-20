@@ -1,0 +1,381 @@
+body {
+    margin: 0 150px;
+    margin-bottom: 50px;
+    padding: 0;
+    background-color: #57b2f8;
+}
+
+.sg-logo__image {
+    width: 200px;
+}
+
+.question{
+    display: block;
+
+    &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+&__carousel {
+    background-color: #ddf7e5;
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+    display: flex;
+    -webkit-box-shadow: 1px -5px 259px 20px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 1px -5px 259px 20px rgba(255, 255, 255, 1);
+    box-shadow: 1px -5px 259px 20px rgba(255, 255, 255, 1);
+}
+
+&__items {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    color: #fff;
+}
+
+&__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    position: absolute;
+    z-index: 2;
+}
+
+&__item--last {
+    visibility: hidden;
+}
+
+&__header--first {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 80px;
+}
+
+&__btn--first:hover {
+    background-color: #434e66;
+}
+&__header {
+    margin-bottom: 40px;
+}
+
+&__text {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+&__btn {
+    margin: 0 10px;
+}
+
+&__btn:hover {
+    background-color: #57b2f8;
+}
+
+&__btn--right {
+    background-color: #53cf92;
+}
+
+&__btn--wrong {
+    background-color: #ff796b;
+}
+
+&__timer {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+&__result {
+    margin-bottom: 40px;
+}
+&__btn--restart:hover {
+    background-color: #53cf92;
+}
+&__restart{
+    color: #FFF;
+}
+}
+.message{
+    position: absolute;
+    transition: transform 1s;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff5d5;
+
+&__cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+&__text {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+&__about {
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+}
+
+&__who {
+    height: 230px;
+    width: 230px;
+    margin-right: 20px;
+}
+
+&__link {
+    text-align: center;
+    margin-top: 10px;
+    color: #53cf92;
+}
+
+&__btn {
+    margin-top: 40px;
+}
+}
+
+@keyframes fadeIn {
+    from {
+        z-index: -1;
+        opacity: 0;
+    }
+    to {
+        z-index: 200;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        z-index: 200;
+        opacity: 1;
+    }
+    to {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+.js-fadein {
+    -webkit-animation: fadeIn 1s linear 0s 1 normal forwards;
+    /* Safari 4+ */
+    -moz-animation: fadeIn 1s linear 0s 1 normal forwards;
+    /* Fx 5+ */
+    -o-animation: fadeIn 1s linear 0s 1 normal forwards;
+    /* Opera 12+ */
+    animation: fadeIn 1s linear 0s 1 normal forwards;
+    /* IE 10+, Fx 29+ */
+}
+
+.js-fadeout {
+    -webkit-animation: fadeOut 1s linear 0s 1 normal forwards;
+    /* Safari 4+ */
+    -moz-animation: fadeOut 1s linear 0s 1 normal forwards;
+    /* Fx 5+ */
+    -o-animation: fadeOut 1s linear 0s 1 normal forwards;
+    /* Opera 12+ */
+    animation: fadeOut 1s linear 0s 1 normal forwards;
+    /* IE 10+, Fx 29+ */
+}
+
+.backgroundimg--frog {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    z-index: 0;
+}
+
+.backgroundimg--hussar {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    height: 210px;
+    z-index: 0;
+}
+
+@media all and (max-width: 1200px) {
+    .question__text {
+        margin: 0 20px;
+        margin-bottom: 40px;
+    }
+    body {
+        margin: 0 100px;
+        margin-bottom: 50px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    body {
+        margin: 0 80px;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media all and (max-width: 700px) {
+    body {
+        margin: 0 40px;
+        margin-bottom: 50px;
+    }
+    .message{
+    &__feedback {
+        margin-top: 20px;
+        font-size: 40px;
+    }
+    &__cont {
+        flex-direction: column;
+    }
+
+    &__who {
+        order: -1;
+        margin: 0;
+        margin-bottom: 20px;
+        height: 200px;
+        width: 200px;
+    }
+    &__btn {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    }
+
+    .backgroundimg--frog {
+        height: 150px;
+    }
+    .backgroundimg--hussar {
+        height: 160px
+    }
+}
+
+@media all and (max-width: 650px) {
+    .message__feedback {
+        font-size: 30px;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+.question__header--first {
+    font-size: 60px;
+}
+    
+    .message__cont {
+        margin-top: 10px;
+    }
+    .message__feedback {
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width: 550px){
+    .question__options{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .question__btn{
+        margin: 20px 0;
+    }
+    .message__feedback {
+        font-size: 30px;
+    }
+}
+
+@media all and (max-width: 500px){
+        .message__feedback {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 450px){
+    .question{
+        
+    &__logo{
+        margin: 20px 0;
+    }
+    &__header--first {
+    font-size: 40px;
+}
+    &__text{
+        margin: 10px 10px;
+    }
+    &__header{
+        font-size: 40px;
+    }
+    }
+    .message__who{
+    height: 180px;
+    width: 180px;
+    }
+    .message__feedback{
+        font-size: 20px;
+    }
+    .backgroundimg--frog {
+        height: 130px;
+    }
+    .backgroundimg--hussar {
+        height: 140px
+    }
+
+    
+}
+@media all and (max-width: 350px){
+.question__text{
+        font-size: 20px;
+    }
+    
+    .message__about{
+        font-size: 15px;
+    }
+    .backgroundimg--frog {
+        height: 100px;
+    }
+    .backgroundimg--hussar {
+        height: 110px
+    }
+    .message__who{
+    height: 150px;
+    width: 150px;
+    }
+}
+    
+@media all and (max-width: 320px){
+    .question{
+    &__header--first{
+            font-size: 30px;
+    }
+    &__header{
+        font-size: 30px;
+    }
+    &__btn{
+        font-size: 13px;
+    }
+    }
+    .message__feedback{
+        font-size: 15px;
+    }
+}
+

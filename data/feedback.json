@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Andrzej Duda",
+    "link": "https://en.wikipedia.org/wiki/Andrzej_Duda",
+    "right": 
+       {
+    "img": "img/ad-good.jpg",
+    "text": "Thanks to your answer Andrzej Duda is a very happy man."
+        },
+    "wrong": 
+       {
+    "img": "img/ad-bad.jpg",
+    "text": "Andrzej Duda laughs at your bad answer."
+        }
+  },
+  {
+    "name": "Bona Sforza",
+    "link": "https://en.wikipedia.org/wiki/Bona_Sforza",
+    "right": 
+       {
+    "img": "img/bs-good.jpg",
+    "text": "Queen Bona is pleased with your answer."
+        },
+    "wrong": 
+       {
+    "img": "img/bs-bad.jpg",
+    "text": "Queen Bona is bored by your answer."
+        }
+},
+  {
+    "name": "Donald Tusk",
+    "link": "https://en.wikipedia.org/wiki/Donald_Tusk",
+    "right": 
+       {
+    "img": "img/dt-good.jpg",
+    "text": "Donald Tusk is proud of you"
+        },
+    "wrong": 
+       {
+    "img": "img/dt-bad.jpg",
+    "text": "Donald Tusk is mad at you."
+        }
+},
+  {
+    "name": "Generał Wojciech Jaruzelski",
+    "link": "https://en.wikipedia.org/wiki/Wojciech_Jaruzelski",
+    "right": 
+       {
+    "img": "img/gj-good.jpg",
+    "text": "Your answer pleases gen. Jaruzelski."
+        },
+    "wrong": 
+       {
+    "img": "img/gj-bad.jpg",
+    "text": "Your answer makes gen. Jaruzelski depressed."
+        }
+},
+  {
+    "name": "Jaroslaw Kaczynski",
+    "link": "https://en.wikipedia.org/wiki/Jaros%C5%82aw_Kaczy%C5%84ski",
+    "right": 
+       {
+    "img": "img/jk-good.jpg",
+    "text": "Jaroslaw Kaczynski congratulates you for giving the right answer."
+        },
+    "wrong": 
+       {
+    "img": "img/jk-bad.jpg",
+    "text": "Your answer makes Jaroslaw Kaczynski furious."
+        }
+},
+  {
+    "name": "Jozef Pilsudzki",
+    "link": "https://en.wikipedia.org/wiki/J%C3%B3zef_Pi%C5%82sudski",
+    "right": 
+       {
+    "img": "img/jp-good.jpg",
+    "text": "Your answer puts Jozef Pilsudzki into good mood."
+        },
+    "wrong": 
+       {
+    "img": "img/jp-bad.jpg",
+    "text": "This answer displeases Jozef Pilsudzki."
+        }
+},
+  {
+    "name": "Jan III Sobieski",
+    "link": "https://en.wikipedia.org/wiki/John_III_Sobieski",
+    "right": 
+       {
+    "img": "img/js-good.jpg",
+    "text": "Your answer makes Jan III Sobieski proud."
+        },
+    "wrong": 
+       {
+    "img": "img/js-bad.jpg",
+    "text": "Jan III Sobieski is not content with your answer."
+        }
+},
+  {
+    "name": "Casimir III the Great",
+    "link": "https://en.wikipedia.org/wiki/Casimir_III_the_Great",
+    "right": 
+       {
+    "img": "img/kw-good.jpg",
+    "text": "Casimir III the Great is amazed by your answer."
+        },
+    "wrong": 
+       {
+    "img": "img/kw-bad.jpg",
+    "text": "Your answer angers Casimir III the Great."
+        }
+},
+  {
+    "name": "Lech Walesa",
+    "link": "https://en.wikipedia.org/wiki/Lech_Wa%C5%82%C4%99sa",
+    "right": 
+       {
+    "img": "img/lw-good.jpg",
+    "text": "You have brightened Lech Walesa's day "
+        },
+    "wrong": 
+       {
+    "img": "img/lw-bad.jpg",
+    "text": "Your lack of knowledge makes Lech Walesa a sad, sad man."
+        }
+},
+  {
+    "name": "Nicolaus Copernicus",
+    "link": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus",
+    "right": 
+       {
+    "img": "img/mk-good.jpg",
+    "text": "Nice! - says Nicolaus Copernicus."
+        },
+    "wrong": 
+       {
+    "img": "img/mk-bad.jpg",
+    "text": "Nicolaus Copernicus is amazed how little you know."
+        }
+},
+  {
+    "name": "Roman Dmowski",
+    "link": "https://en.wikipedia.org/wiki/Roman_Dmowski",
+    "right": 
+       {
+    "img": "img/rd-good.jpg",
+    "text": "Roman Dmowski congratulate you, but ultimately do not care."
+        },
+    "wrong": 
+       {
+    "img": "img/rd-bad.jpg",
+    "text": "Roman Dmowski is disgusted by your ignorance."
+        }
+},
+  {
+    "name": "Marie Curie",
+    "link": "https://en.wikipedia.org/wiki/Marie_Curie",
+    "right": 
+       {
+    "img": "img/sc-good.jpg",
+    "text": "Marie Curie is very content with your answer."
+        },
+    "wrong": 
+       {
+    "img": "img/sc-bad.jpg",
+    "text": "Marie Curie gets a headache because of you."
+        }
+}
+]
