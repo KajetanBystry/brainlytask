@@ -188,9 +188,9 @@ function timer(){
         stoper.innerHTML = `${counter}s`;
     
         if (data.length === 0) {
-                result.textContent = `${time} s`
                 clearInterval(counting);
                 stoper.style.visibility = 'hidden';
+                result.textContent = `${time} s`
         }    
             
         if(counter === 0){
@@ -204,9 +204,9 @@ function timer(){
         index++;
         clearInterval(counting);
         if (data.length === 0) {
-                result.textContent = `${time} s`
                 clearInterval(counting);
                 stoper.style.visibility = 'hidden';
+                result.textContent = `${time} s`
                 return 0
             } else {
             createQuestionTags(data)
